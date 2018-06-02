@@ -1,5 +1,8 @@
 
 #include <iostream>
+#include <stdio.h>      /* printf, scanf, puts, NULL */
+#include <stdlib.h>     /* srand, rand */
+#include <time.h>       /* time */
 using namespace std;
 //class Character.h
 class Character{
@@ -68,11 +71,27 @@ class Abuson: public Character{
 			cout<<"Siempre colabora"<<endl;
 		}
 		bool actuando(bool ac){
-			ac=0;
+			ac = 0;
 			return ac;
 		}
 		
 };
+
+//Class Aleatorio ->
+class Aleatorio: public Character{
+	public:
+		Aleatorio(int C, bool A):Character(C,A){
+		}
+		void interactua(){
+			cout << "random" << endl;
+		}
+		bool actuando(bool ac){
+			srand(time(NULL));
+			ac = rand() % 2;
+			return ac;
+		}
+};
+
 //Arbitro
 
 int interactuando(bool x,bool y){
@@ -99,9 +118,9 @@ int interactuando(bool x,bool y){
 // 0 Engana
 // 1 Colabora
 int main(){
-	//Los 3 Funcionan, Hay que quitarle los // para que funcionen, 1 a la vez
+   //Los 3 Funcionan, Hay que quitarle los // para que funcionen, 1 a la vez
   //Abuson objCoop(20,0);//--Este no Funciona
-  CopyCat objCoop(20,1);
+  Aleatorio objCoop(20,1);
   //Cooperative objCoop(20,1);
   Character Tu(20,0);
 	
