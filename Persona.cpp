@@ -56,11 +56,11 @@ int actuar(const Persona &p){
 	cin>>x;
 	if(x=='e')
 	{
-		set_acc();
+		set_acc(e);
 		cout<<enganar(p);
 	}
 	else{
-		set_acc();
+		set_acc(c);
 		cout<<enganar(p);
 	}
 
