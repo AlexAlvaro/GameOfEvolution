@@ -148,9 +148,9 @@ int main()
 {
     //Los 3 Funcionan, Hay que quitarle los // para que funcionen, 1 a la vez
     //Abuson objCoop(20,0);//--Este no Funciona
-    //Aleatorio objCoop(20, 1); // Funciona // 
+    Aleatorio objCoop(20, 1); // Funciona //
     //Cooperative objCoop(20,1);
-    CopyCat objCoop(20, 1);
+    //CopyCat objCoop(20, 1);
     Character Tu(20, 0);
 
     //Character *poblador1=&objCopy;
