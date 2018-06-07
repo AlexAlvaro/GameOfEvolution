@@ -146,6 +146,54 @@ class Aleatorio : public Character
         return ac;
     }
 };
+//Class Rencoroso
+class Rencoroso : public Character
+{
+  private:
+	int Rencor;
+  public:
+    Rencoroso(int C, bool A) : Character(C, A)
+    {
+		Rencor=0;
+    }
+    void interactua()
+    {
+        cout << "random" << endl;
+    }
+	int get_ren()
+    {
+        return Rencor;
+    }
+    void set_ren(int r)
+    {
+        Rencor = r;
+    }
+    bool actuando(bool ac, int turno)
+    {
+		string ven;
+		if(ac==0){
+			ven="Enganaste";
+			cout<<"Ahora siempre te enganare"<<endl;
+			set_ren(Rencor+1);
+			ac=1;
+			return ac; 		
+		}
+		else{
+			ven="Cooperaste";
+			if(Rencor==0){
+				cout<<"Yo te cooperare tambien"<<endl;
+				ac=1;
+				return ac;
+			}
+			else{
+				cout<<"Pero ya me tracionaste anteriormente"<<endl;
+				ac=1;
+				return ac;
+			}
+		}
+		
+    }
+};
 
 //Arbitro
 
