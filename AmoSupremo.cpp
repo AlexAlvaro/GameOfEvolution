@@ -397,6 +397,53 @@ int main()
     //Cooperative objCoop(20,1);
     //CopyCat objCoop(20, 1);
     Character Tu(20, 0);
+	
+	
+	///Intento de escoger Rival
+	/*
+	CopyCat     objCoop1(20, 1);
+	Cooperative objCoop2(20, 1);
+	Abuson      objCoop3(20, 0);
+    Aleatorio   objCoop4(20, 1); // Funciona //
+    Rencoroso   objCoop5(20, 1);
+	Considerado objCoop6(20, 1);
+    Simplon     objCoop7(20, 1);
+    
+	cout<<"Escoje Un oponente"<<endl;
+	Character *Bot;
+	cin>>oponente;
+	switch(oponente){ 
+					case(1):{
+						*Bot = &objCoop1;
+						break;
+					}
+					case(2):{
+						*Bot = &objCoop2;
+						break;
+					}
+					case(3):{
+						*Bot = &objCoop3;
+						break;
+					}
+					case(4):{
+						*Bot = &objCoop4;
+						break;
+					}
+					case(5):{
+						*Bot = &objCoop5;
+						break;
+					}
+					case(6):{
+						*Bot = &objCoop6;
+						break;
+					}
+					case(7):{
+						*Bot = &objCoop7;
+						break;
+					}
+	
+	}
+	*/
 
     //Character *poblador1=&objCopy;
     Character *Bot = &objCoop; //Coop
