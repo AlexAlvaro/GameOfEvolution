@@ -3,13 +3,13 @@
 #include <stdio.h>  /* printf, scanf, puts, NULL */
 #include <stdlib.h> /* srand, rand */
 #include <time.h>   /* time */
-
 #include "Character.h"
 #include "Copycat.h"
 #include "Cooperative.h"
+#include "Aleatorio.h"
+// #include "Detective.h" //ERROR DE COMPILACION//
 
-using namespace std;
-
+/*
 //Class Abuson--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 class Abuson : public Character
 {
@@ -36,35 +36,6 @@ class Abuson : public Character
 		cout << endl
 			 << "Me " << ven << " en el turno: " << turno + 1 << " Igual, Siempre Te enganare" << endl;
 		ac = 0;
-		return ac;
-	}
-};
-
-//Class Aleatorio ->--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-class Aleatorio : public Character
-{
-  public:
-	Aleatorio(int C, bool A) : Character(C, A)
-	{
-	}
-	void interactua()
-	{
-		cout << "Soy Aleatorio mi Personalidad es :" << endl
-			 << " Random" << endl;
-	}
-	bool actuando(bool ac, int turno)
-	{
-		string ven;
-		if (ac == 0)
-		{
-			ven = "Enganaste";
-		}
-		else
-		{
-			ven = "Cooperaste";
-		}
-		srand(time(NULL));
-		ac = rand() % 2;
 		return ac;
 	}
 };
@@ -298,15 +269,26 @@ int interactuando(bool x, bool y)
 //Main.cpp--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // 0 Engana
 // 1 Colabora
+
+
 int main()
 {
 	int NumTur = 5; //Cantidad de partidas que se jugaran
 					//Los 7 Funcionan, Hay que quitarle los // para que funcionen, 1 a la vez
 					//Abuson objCoop(20,0);//--Este no Funciona
 	Character Tu(20, 0);
-	Cooperative obj(20, 1); // Funciona //
-	//Cooperative objCoop(20,1);
+
+	//	DECLARACIOON DE PERSONAJES MANUAL //
 	//CopyCat objCoop(20, 1);
+	//Cooperative obj(20, 1); 		// NO Funciona //
+	//Cooperative objCoop(20, 1); 	// funciona //
+	//Abuson objCoop(20, 1); 		// falta probar e implementar los .inl y .h de Abuson //
+	//Detective objCoop(20, 1); 	// errores de compilación //
+	Aleatorio objCoop(20, 1); 	// falta probar e implemtar los .inl y .h de Aleatorio //
+	//Rencoroso objCoop(20, 1);	 	// flata probar e implentar los .inl y .h de Rencoroso //
+	//Considerado objCoop(20, 1);	// falta probar e implentar los .inl y .h de Considerado // 
+	//Simplon objCoop(20, 1);		// falta probar e implementar los .inl y .h de Simplon //
+
 
 	///Intento de escoger Rival
 	/*
@@ -355,7 +337,7 @@ int main()
 	*/
 
 	//Character *poblador1=&objCopy;
-	Character *Bot = &obj;
+	Character *Bot = &objCoop;
 	Character *Yo = &Tu;
 	//poblador1->interactua();//accede a las funciones
 
@@ -403,12 +385,12 @@ int main()
 				Bot->EmpaGan();
 			}
 		}
-		//Resultados
+			//Resultados
 		cout << "En la ronda " << i + 1 << " Va de siguiente manera" << endl;
 		cout << "TU con: " << Yo->get_coins() << " Monedas" << endl;
 		cout << "Rival con: " << Bot->get_coins() << " Monedas" << endl;
-		//system("pause");
-		//system("cls");
+			//system("pause");
+			//system("cls");
 		mente = Bot->actuando(Vas, i);
 		Bot->set_acc(mente);
 	}
