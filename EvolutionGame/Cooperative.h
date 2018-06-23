@@ -4,10 +4,11 @@
 
 class Cooperative : public Character{
   public:
-    Cooperative(int C, bool A) : Character::Character(C, A){};
+    Cooperative(int C, bool A) : Character(C, A){};
+    ~Cooperative(){};
     void interactua();
     bool actuando(bool ac, int turno);
 };
 
-#include "Cooperative.h"
+#include "Cooperative.inl"
 #endif

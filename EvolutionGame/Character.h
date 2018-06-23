@@ -3,13 +3,14 @@
 
 class Character
 {
-  private:
+  protected:
     int coins;
     bool accion;
 
   public:
-    Character(int C, bool A); 
-    int get_coins(); 
+    Character(int C, bool A);
+    ~Character(){};
+    int get_coins();
     void set_coins(int C);
     int get_acc();
     void set_acc(bool acc);
