@@ -4,17 +4,19 @@
 
 class Detective : public Character
 {
-public:
-  Detective(int C, bool A) : Character(C, A){
+  private:
+    int anteriorAc;
 
-  };
-  ~Detective(){
+  public:
+    Detective(int C, bool A) : Character(C, A){
+      anteriorAc = 1;
+    };
+    ~Detective(){};
 
-  };
-  void interactua();
-  int get_ModeJekyll();
-  void set_ModeJekyll();
-  bool actuando(bool ac, int turno);
+    bool get_anterior();
+
+    void interactua();
+    bool actuando(bool ac, int turno);
 };
 
 #include "Detective.inl"
