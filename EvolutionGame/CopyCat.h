@@ -5,12 +5,9 @@
 class CopyCat : public Character
 {
   public:
-    CopyCat(int C, bool A) : Character(C, A){
-
-                             };
-    ~CopyCat(){
-
-    };
+    CopyCat(int C, bool A) : Character(C, A){};
+    ~CopyCat(){};
+    
     void interactua();
     bool actuando(bool ac, int turno);
 };

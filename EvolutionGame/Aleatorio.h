@@ -8,12 +8,9 @@
 class Aleatorio : public Character
 {
     public:
-      Aleatorio(int C, bool A) : Character(C, A){
-
-                                 };
-      ~Aleatorio(){
-
-      };
+      Aleatorio(int C, bool A) : Character(C, A){};
+      ~Aleatorio(){};
+      
       void interactua();
       bool actuando(bool ac, int turno);
 };
