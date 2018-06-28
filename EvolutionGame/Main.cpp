@@ -6,7 +6,7 @@
 #include "Rencoroso.h"
 #include "Considerado.h"
 #include "Simplon.h"
-//#include "Detective.h" //ERROR DE COMPILACION//
+#include "Detective.h"
 
 int main()
 {
@@ -20,11 +20,11 @@ int main()
 	//Cooperative obj(20, 1);
 	//Cooperative objCoop(20, 1);
 	//Abuson objCoop(20, 1);
-	//Detective objCoop(20, 1);
+	Detective objCoop(20, 1);
 	//Aleatorio objCoop(20, 1);
 	//Rencoroso objCoop(20, 1);
 	//Considerado objCoop(20, 1);
-	Simplon objCoop(20, 1);
+	//Simplon objCoop(20, 1);
 
 	///Intento de escoger Rival
 	/*
