@@ -105,7 +105,7 @@ int main()
 	Character *Bot7 = &Consi;
 	Character *Bot8 = &Sim;
 	
-	vector <Character> Ronda; ///Creando la ronda
+	vector <Character *> Ronda; ///Creando la ronda
 	int ron,sum=0,opc; //Definir manualmente hasta que el problema sea solucionado
 	//cout<<"Cuantos integrantes Tendra la Ronda??"<<endl;
 	//cin>> ron; //Todavia no
@@ -122,7 +122,7 @@ int main()
 				cin>>nCopy;		
 				for (int i =0; i<nCopy;i++)
 				{
-					Ronda.push_back(*Bot1);
+					Ronda.push_back(Bot1);
 				}
 				sum=sum+nCopy;
 				break;
@@ -132,7 +132,7 @@ int main()
 				cin>>nCoop;		
 				for (int i =0; i<nCopy;i++)
 				{
-					Ronda.push_back(*Bot2);
+					Ronda.push_back(Bot2);
 				}
 				sum=sum+nCoop;
 				break;
@@ -142,7 +142,7 @@ int main()
 				cin>>nAbu;		
 				for (int i =0; i<nCopy;i++)
 				{
-					Ronda.push_back(*Bot3);
+					Ronda.push_back(Bot3);
 				}
 				sum=sum+nAbu;
 				break;
@@ -152,7 +152,7 @@ int main()
 				cin>>nDetec;		
 				for (int i =0; i<nCopy;i++)
 				{
-					Ronda.push_back(*Bot4);
+					Ronda.push_back(Bot4);
 				}
 				sum=sum+nDetec;
 				break;
@@ -162,7 +162,7 @@ int main()
 				cin>>nAlea;		
 				for (int i =0; i<nCopy;i++)
 				{
-					Ronda.push_back(*Bot5);
+					Ronda.push_back(Bot5);
 				}
 				sum=sum+nAlea;
 				break;
@@ -172,7 +172,7 @@ int main()
 				cin>>nRenc;		
 				for (int i =0; i<nCopy;i++)
 				{
-					Ronda.push_back(*Bot6);
+					Ronda.push_back(Bot6);
 				}
 				sum=sum+nRenc;
 				break;
@@ -182,7 +182,7 @@ int main()
 				cin>>nConsi;		
 				for (int i =0; i<nCopy;i++)
 				{
-					Ronda.push_back(*Bot7);
+					Ronda.push_back(Bot7);
 				}
 				sum=sum+nConsi;
 				break;
@@ -192,7 +192,7 @@ int main()
 				cin>>nSim;		
 				for (int i =0; i<nCopy;i++)
 				{
-					Ronda.push_back(*Bot8);
+					Ronda.push_back(Bot8);
 				}
 				sum=sum+nSim;
 				break;
@@ -209,7 +209,7 @@ int main()
 	//Mostrando
 	for (int i=0; i<sum;i++)//Ronda.size()  Use esto y se volvia infinito
 	{
-		Ronda[i].interactua(); 
+		Ronda[i]->interactua(); 
 	}
 	
 	return 0;
